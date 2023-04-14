@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIT
-    </title>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIT</title>
+    <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
-
     <header id="container">
+        <div id="ColorFlipper">
+            <p>Color Flipper</p>
+        </div>
 
-        <div id="ColorFlipper"> <p>Color Flipper</p> </div>
-        
-        <div id="Options"> <button id="Simple" onclick="mudarTipoSimple()">Simple</button> <button id="Hex" onclick="mudarTipoHex()">Hex</button> </div>
-
-        
-
+        <div id="Options">
+            <button id="Simple" onclick="mudarTipoSimple()">Simple</button>
+            <button id="Hex">Hex</button>
+        </div>
     </header>
     <div id="fundo">
-        
         <div id="labelDiv">
-
-            <label style="color: white;">Backgornd Color : </label>
+            <label style="color: white;">Background Color :</label>
             <label id="labelCor"></label>
-
         </div>
-        <button onclick="mudarCorHex()" id="trocaFundo">CLICK ME</button>
-
-
+        <button onclick="mudarCorHex()" class="normal" id="trocaFundo">CLICK ME</button>
     </div>
 
-
     <script type="text/javascript" src="./index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("Hex").addEventListener("click", mudarTipoHex);
+        });
+    </script>
 </body>
+
 </html>
